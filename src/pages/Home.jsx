@@ -21,7 +21,7 @@ function Home() {
       }
     };
     loadPopularMovies();
-  }, []);
+  }, [movies]);
 
   const handleSearch = async (e) => {
     e.preventDefault();
