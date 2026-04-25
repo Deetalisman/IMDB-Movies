@@ -12,7 +12,6 @@ function Home() {
       try {
         const popularMovies = await getPopularMovies();
         setMovies(popularMovies);
-        console.log(movies);
       } catch (err) {
         setError("Failed to load movies....");
         console.log(err);
@@ -21,7 +20,7 @@ function Home() {
       }
     };
     loadPopularMovies();
-  }, [movies]);
+  }, []);
 
   const handleSearch = async (e) => {
     e.preventDefault();
